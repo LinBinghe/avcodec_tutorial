@@ -44,13 +44,13 @@ const uint8_t HuffmanCodec::STD_HUFTAB_CHROM_DC[] = {
 };
 
 HuffmanCodec::HuffmanCodec() : mBitStream(nullptr) {
-    initCoddList(true, true);
-    initCoddList(true, false);
-    initCoddList(false, true);
-    initCoddList(false, false);
+    initCodeList(true, true);
+    initCodeList(true, false);
+    initCodeList(false, true);
+    initCodeList(false, false);
 }
 
-void HuffmanCodec::initCoddList(bool dc, bool luminance) {
+void HuffmanCodec::initCodeList(bool dc, bool luminance) {
     int i, j, k;
     int symbol;
     int code;

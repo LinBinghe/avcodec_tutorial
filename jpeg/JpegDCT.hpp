@@ -5,12 +5,20 @@
 #ifndef JPEG_JPEGDCT_HPP
 #define JPEG_JPEGDCT_HPP
 
+/**
+ * DCT变换器
+ */
 class JpegDCT {
 public:
     JpegDCT();
 
     ~JpegDCT();
 
+    /**
+     * 将8x8的子块数据进行FDCT变换
+     * @param data8x8 8x8的子块数据
+     * @param ftab fdct表，可为空
+     */
     void fdct2d8x8(int *data8x8, int *ftab);
 
 private:
